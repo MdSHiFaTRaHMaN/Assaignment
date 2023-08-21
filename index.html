@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Use font Awesome icon -->
-    <script src="https://kit.fontawesome.com/f494bafbd6.js" crossorigin="anonymous"></script>
     <!-- use daisyUI  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <!-- use google font -->
@@ -13,49 +11,43 @@
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- use tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Fruits Shop</title>
-    <link rel="icon" href="images/logo.png"  type="image/x-icon">
+    <title>Summer Sale</title>
     <style>
         *{
             font-family: 'MuseoModerno', cursive;
-        }
-        .vanis{
-          display: none;
         }
     </style>
 </head>
 <body>
       <!-- header section -->
-      <section class="text-gray-600 body-font bg-yellow-100">
-        <div class="container mx-auto flex px-[200px] py-24 md:flex-row flex-col items-center">
-          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h3 class="ml-20 mb-3">--SALE FEVER--</h3>
+      <section class="text-gray-600 body-font bg-yellow-100 w-full ">
+        <div class="container mx-auto lg:flex md:flex grid lg:px-[200px] px-0 py-24 md:flex-row flex-col items-center ">
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 pl-60 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h3 class="lg:ml-20 ml-0 mb-3">--SALE FEVER--</h3>
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Purchase TK 200 or <br>
                  above & get <span class="text-pink-700">20% off</span>
             </h1>
             <div class="flex justify-center items-center gap-3">
               <h4>Use Promo Code</h4>
-              <h2 class="text-white px-4 py-2 bg-pink-600 rounded-lg">SELL200</h2>
+              <button class="text-white px-4 py-2 bg-pink-600 rounded-lg">SELL200</button>
             </div>
           </div>
-          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          <div class="lg:max-w-lg w-[370px] lg:w-full lg:ml-0 ml-48 md:w-1/2 mb-10 md:mb-0">
             <img class="object-cover object-center" src="images/Summer 1.png">
           </div>
         </div>
       </section>
-
-      <!-- product section -->
-       <section class=" bg-stone-200 ">
-               <div class="flex">
+<!-- header section  end-->
+       <section class=" lg:bg-stone-200 bg-white lg:w-full w-[750px]">
+         <div class="flex">
           <div class="block">
             <!-- Kitchenware product -->
-              <div class="container  mr-10 ml-36 py-24 mx-auto ">
+              <div class="container  mr-10 lg:ml-36 ml-52 py-24 mx-auto ">
                 <h1 class="font-bold text-3xl mb-4">Kitchenware</h1>
-
-                <div class="flex flex-wrap -m-4 ">
-                  <div class="p-4  ">
+                <div class="lg:flex grid flex-wrap -m-4 ">
+                  <div class="p-4 cursor-pointer " id="product-one" onclick="productAlDetails1()">
                     <!-- first cart -->
-                    <div class="card w-72 bg-base-100 shadow-xl">
+                    <div class="card w-72  bg-base-100 shadow-xl">
                       <div class="bg-slate-300 m-5 rounded-lg">
                         <img src="/images/prod1.png" alt="" class="ml-16 w-[110px]">
                       </div>
@@ -67,13 +59,13 @@
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         </div>
-                        <h2 class="card-title">K. Accessories</h2>
-                        <h3 class="text-slate-500">39.00 TK</h3>
+                        <h2 class="card-title" id="productname1">K. Accessories</h2>
+                        <h3 class="text-slate-500" id="productprice1">39.00 TK</h3>
                       </div>
                     </div>
                   </div>
                   <!-- second cart -->
-                  <div class="p-4 ">
+                  <div class="p-4 cursor-pointer" id="product-two" onclick="productAlDetails2()">
                     <div class="card w-72 bg-base-100 shadow-xl">
                       <div class="bg-slate-300 m-5 rounded-lg">
                         <img src="/images/prod2.png" alt="" class="ml-16 w-[140px]">
@@ -86,13 +78,13 @@
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked/>
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         </div>
-                        <h2 class="card-title">K. Accesories</h2>
-                        <h3 class="text-slate-500">25.00 TK</h3>
+                        <h2 class="card-title" id="productname2">S. Accesories</h2>
+                        <h3 class="text-slate-500" id="productprice2">25.00 TK</h3>
                       </div>
                     </div>
                   </div>
                   <!-- third card -->
-                  <div class="p-4 ">
+                  <div class="p-4 cursor-pointer"onclick="productAlDetails3()">
                     <div class="card w-72 bg-base-100 shadow-xl">
                       <div class="bg-slate-300 m-5 rounded-lg">
                         <img src="/images/prod3.png" alt="" class="ml-16 ">
@@ -105,20 +97,19 @@
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         </div>
-                        <h2 class="card-title">Home Cooker</h2>
-                        <h3 class="text-slate-500">49.00 TK</h3>
+                        <h2 class="card-title" id="productname3">Home Cooker</h2>
+                        <h3 class="text-slate-500" id="productprice3">49.00 TK</h3>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- Sportswear Product section -->
-              <div class="container  mr-10 ml-36 py-14 mx-auto ">
+              <div class="container  mr-10 lg:ml-36 ml-52 mx-auto ">
                 <h1 class="font-bold text-3xl mb-4">Sportswear</h1>
-
-                <div class="flex flex-wrap -m-4 ">
-                  <div class="p-4  ">
-                    <!-- first cart -->
+                <div class="lg:flex grid flex-wrap -m-4 ">
+                  <div class="p-4 cursor-pointer" onclick="productAlDetails4()">
+                    <!-- product-4 -->
                     <div class="card w-72 bg-base-100 shadow-xl">
                       <div class="bg-slate-300 m-5 rounded-lg">
                         <img src="/images/prod4.png" alt="" class="ml-12 w-[190px]">
@@ -131,13 +122,13 @@
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         </div>
-                        <h2 class="card-title">Sports Back Cap</h2>
-                        <h3 class="text-slate-500">39.00 TK</h3>
+                        <h2 class="card-title" id="productname4">Sports Back Cap</h2>
+                        <h3 class="text-slate-500"id="productprice4">39.00 TK</h3>
                       </div>
                     </div>
                   </div>
-                  <!-- second cart -->
-                  <div class="p-4 ">
+                  <!-- product 5 -->
+                  <div class="p-4 cursor-pointer"onclick="productAlDetails5()">
                     <div class="card w-72 bg-base-100 shadow-xl">
                       <div class="bg-slate-300 m-5 rounded-lg">
                         <img src="/images/prod5.png" alt="" class="ml-16 ">
@@ -150,13 +141,13 @@
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         </div>
-                        <h2 class="card-title">Full Jersey Set</h2>
-                        <h3 class="text-slate-500">69.00 TK</h3>
+                        <h2 class="card-title" id="productname5">Full Jersey Set</h2>
+                        <h3 class="text-slate-500" id="productprice5">69.00 TK</h3>
                       </div>
                     </div>
                   </div>
-                  <!-- third card -->
-                  <div class="p-4 ">
+                  <!-- product 6 -->
+                  <div class="p-4 cursor-pointer" onclick="productAlDetails6()">
                     <div class="card w-72 bg-base-100 shadow-xl">
                       <div class="bg-slate-300 m-5 rounded-lg">
                         <img src="/images/prod6.png" alt="" class="ml-16 ">
@@ -169,35 +160,46 @@
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                           <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         </div>
-                        <h2 class="card-title">Sports cates</h2>
-                        <h3 class="text-slate-500">159.00 TK</h3>
+                        <h2 class="card-title" id="productname6">Sports cates</h2>
+                        <h3 class="text-slate-500" id="productprice6">159.00 TK</h3>
                       </div>
                     </div>
                   </div>
                 </div>
           </div>
         </div>
-          <div class="w-[300px]  mt-[150px]">
+        <!-- Open the modal using ID.showModal() method -->
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+              <img src="images/congo.png" class="mx-auto">
+              <p class="py-4 text-center text-3xl font-bold">Congratulations</p>
+              <h5 class="text-center">Your purchase the Product</h5>
+              <div class="py-4">
+                <button class="btn bg-rose-400 text-white ml-[180px] hover:bg-green-500" id="go-home">Go Home</button>
+              </div>
+            </form>
+          </dialog>
+          <div class="w-[300px]  mt-[150px] lg:relative absolute lg:block hidden">
             <div class="bg-white p-5 rounded-lg ">
               <h1 class="my-3 font-bold text-2xl">Have Coupon?</h1>
-                <input type="text" placeholder="Coupon code" class="py-2 px-2 border w-[180px] rounded-l-lg">
-                <button class="bg-pink-900 p-[9px] -ml-[5px] text-slate-500 rounded-r-lg " disabled>Apply</button>
+                <input type="text" placeholder="Coupon code" id="coupon-field" class="py-2 px-2 border w-[180px] rounded-l-lg" disabled>
+                <button id="applybtn" class="bg-pink-900 p-[9px] -ml-[5px] text-slate-500 rounded-r-lg "disabled>Apply</button>
             </div>
             <div class="bg-white p-5 mt-5">
-              <h3 class="mb-2">1. </h3>
-              <h3 class="mb-2">2. </h3>
-              <h3 class="mb-2">3. </h3>
+              <div id="add-product" class="">
+              </div>
               <div class="flex justify-center mb-2">
                 <h1 class=" w-[250px] h-[1px] bg-slate-700 my-2 "></h1>
               </div>
-              <h3 class="mb-2">Total Price: <span class="text-slate-500"> 00.00 Tk</span></h3>
-              <h3 class="mb-2">Discount: <span class="text-slate-500">00.00 TK</span></h3>
-              <h3>Total: <span class="text-slate-500">00.00 TK</span></h3>
-              <button class="bg-pink-500 px-11 mt-4 ml-7 py-2 text-white rounded-lg">Make Purchase</button>
+              <h3 class="mb-2">Total Price: <span class="text-slate-500" id="total-price" > 00.00 </span>TK</h3>
+              <h3 class="mb-2">Discount: <span class="text-slate-500" id="discount">00.00 </span>TK</h3>
+              <h3>Total: <span class="text-slate-500" id="final-price">00.00 </span>TK</h3>
+              <button class="bg-pink-300 px-11 mt-4 ml-7 py-2 text-slate-600 rounded-lg" 
+              id="purchase-btn" onclick="my_modal_5.showModal()" disabled>Make Purchase</button>
             </div>
           </div>
         </div>
        </section>
-
+       <script src="product.js"></script>
 </body>
 </html>
